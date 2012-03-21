@@ -8,6 +8,7 @@ function countdownTimer( time_remaining ) {
   var now = (Date.parse(now) / 1000);
 
   var timeLeft = endTime - now;
+  timeLeft = (timeLeft > 0) ? timeLeft : 0;
 
   var days = Math.floor(timeLeft / 86400);
   var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
