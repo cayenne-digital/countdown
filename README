@@ -1,31 +1,25 @@
---------------------
-2011-10-06
-Made this non jquery dependant
-implementation like this
+Based on a script by Matthew Price
+https://github.com/matthewaprice/Javascript-Countdown-Timer
 
-<script type="text/javascript">setInterval(function(){countdownTimer('January 04, 2012 12:55:43')},1000);</script>
+Heavily modified by Francesco Negri at Cayenne Digital
+https://github.com/cayenne-digital/countdown
 
-2011-03-27
-Changed the way the output is generated.  In the example below i have an unordered list with ids on the <li>s.
+Released under the terms of the MIT License:
 
-HTML
-<div id="timer">
-     <ul>
-           <li id="days"></li>
-           <li id="hours"></li>
-           <li id="minutes"></li>
-           <li id="seconds"></li>
-     </ul>
-</div>
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-CSS
-#timer ul { list-style-type: none; }
-#timer ul li span { display: block; float: left; width: 100px; }
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
 
-Added support page at: http://www.matthewaprice.com/simple-javascript-timer/
---------------------
-2011-03-27
-This is a simple javascript countdown timer for jquery.  You put this in your scripts.js file.  This is not a plugin.  Currently it works by pulling unix time off an id of a span in your html.  My original purpose was for pulling the initial timer from a db.  I would like to adapt this into a jquery plugin so that you could call it like this:
-
-$("#timer").countDown("September 01, 2011 00:00:00");
---------------------
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
