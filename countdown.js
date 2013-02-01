@@ -8,15 +8,16 @@
 * v0.2.0 - 2012-03-21
 */
 
-function countdownTimer( end_date, prefix ) {
+var offset = 0;
 
+function countdownTimer( end_date, offset, prefix ) {
+
+  if (offset == null) offset = 0;
   if (prefix == null) prefix = "timer_";
 
-  var endDate = new Date(end_date);
-  var endTime = (Date.parse(endDate)) / 1000;
+  var endTime = Date.parse(new Date(end_date)) / 1000;
 
-  var now = new Date();
-  var now = (Date.parse(now) / 1000);
+  var now = (Date.parse(new Date()) - offset) / 1000;
 
   var timeLeft = endTime - now;
   timeLeft = (timeLeft > 0) ? timeLeft : 0;
@@ -50,10 +51,17 @@ function countdownTimer( end_date, prefix ) {
 
 }
 
-function pad(numNumber, numLength){
+function pad(numNumber, numLength) {
   var strString = '' + numNumber;
   while(strString.length<numLength){
     strString = '0' + strString;
   }
   return strString;
+}
+
+function findOffset(serverDate) {
+  var clock = Date.parse(new Date());
+  var server = Date.parse(new Date(serverDate));
+  var offset = clock - server;
+  return offset;
 }
