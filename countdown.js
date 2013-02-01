@@ -1,12 +1,12 @@
 /*
-* Original code by Matthew Price
-* https://github.com/matthewaprice/Javascript-Countdown-Timer
-*
-* Forked and modified by Francesco Negri @ Cayenne Italia
-* https://github.com/cayenne-digital/Javascript-Countdown-Timer
-* 
-* v0.2.0 - 2012-03-21
-*/
+ * Based on a script by Matthew Price
+ * https://github.com/matthewaprice/Javascript-Countdown-Timer
+ *
+ * Heavily modified by Francesco Negri at Cayenne Digital
+ * https://github.com/cayenne-digital/countdown
+ *
+ * v0.2.1 - 2013-02-01
+ */
 
 var offset = 0;
 
